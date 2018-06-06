@@ -1,0 +1,1 @@
+{'ido': ['dora1', 'idorozval@gmail.com', 'ACCEPTED', 'ADMIN'], 'idorozval': ['rozval826', 'idorozval@gmail.com', 'DENIED', 'MEMBER']}

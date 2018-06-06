@@ -1,0 +1,47 @@
+﻿<Controls:MetroWindow x:Class="WpfApplication3.ChangePassWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication3"
+        mc:Ignorable="d"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        BorderThickness="0" 
+        GlowBrush="Black"
+        ResizeMode="CanResizeWithGrip"
+
+        WindowTransitionsEnabled="False"
+        WindowStartupLocation="CenterScreen"
+        Title="ChangePassWindow" Height="450" Width="550">
+    <Grid>
+        <Image Source="pictures/3_4_2500.png" Stretch="Fill"/>
+        <Border Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" Height="350" CornerRadius="10,10,10,10" Background="#176921">
+            <Grid Background= "#176921" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Change Profile" FontFamily="Rockwell" FontSize="35" TextAlignment="Center" VerticalAlignment="Center" Foreground="WhiteSmoke"/>
+
+                <TextBox x:Name="userbox" Grid.Row="1" Width="250" Height="40" Text="Username" BorderThickness="0,0,0,1" Background="#176921" FontFamily="Rockwell" FontSize="25" TextAlignment="Center" Margin="40,0,40,0" GotFocus="UserBoxFocus" LostFocus="UserBoxLost"/>
+
+                <TextBox x:Name="passbox" Grid.Row="2" Width="250" Height="40" Text="Password" BorderThickness="0,0,0,1" Background="#176921" FontFamily="Rockwell" FontSize="25" TextAlignment="Center" Margin="40,0,40,0" GotFocus="PassBoxFocus" LostFocus="PassBoxLost"/>
+
+                <TextBox x:Name="newpassbox" Grid.Row="3" Width="250" Height="40" Text="New Password" BorderThickness="0,0,0,1" Background="#176921" FontFamily="Rockwell" FontSize="25" TextAlignment="Center" Margin="40,0,40,0" GotFocus="NewPassBoxFocus" LostFocus="NewPassBoxLost"/>
+
+                <Border Grid.Row="4" Background="#3897C5" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="10,10,10,10">
+                    <Button MouseLeave="ButtonColorBlack" MouseEnter="ButtonColorWhite" Width="150" Background="#3897C5" Margin="5" Content="Submit" FontFamily="Rockwell" FontSize="22" Click="SendDetails"/>
+                </Border>
+
+                
+
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</Controls:MetroWindow>

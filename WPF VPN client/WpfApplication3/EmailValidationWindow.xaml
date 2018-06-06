@@ -1,0 +1,41 @@
+﻿<Controls:MetroWindow x:Class="WpfApplication3.EmailValidationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication3"
+        mc:Ignorable="d"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        BorderThickness="0" 
+        GlowBrush="Black"
+        ResizeMode="CanResizeWithGrip"
+        
+        WindowTransitionsEnabled="False"
+        WindowStartupLocation="CenterScreen"
+        Title="Email Validation" Height="300" Width="350" TitleAlignment="Center">
+
+    <Grid Background="#3897C5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border  Background="#333843" Width="225" Height="200" CornerRadius="5">
+            <Grid Margin="5" Background="#333843">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <StackPanel x:Name="validationGrid" Orientation="Horizontal" Grid.Row="0" MouseEnter="ValidationGridEnter" MouseLeave="ValidationGridLeave" MouseDown="ShowHelp">
+                    <TextBlock Text="Validation" Margin="20,0,0,0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Rockwell"/>
+                    <Image Margin="10,0,0,0" Width="50" Source="pictures/infoicon.png"/>
+                </StackPanel>
+                <TextBox Grid.Row="1" x:Name ="codebox" Text="Code" Margin="30" Background="Transparent" Foreground="White" BorderThickness="0,0,0,2" BorderBrush="#3897C5" FontFamily="Rockwell" FontSize="25" TextAlignment="Center" GotFocus="CodeBoxFocus" LostFocus="CodeBoxLost" />
+            </Grid>
+        </Border>
+        <Image Grid.Column="1" Width="70" VerticalAlignment="Center" Source="pictures/arrowicon.png" MouseDown="ProceedDetails"/>
+
+
+
+    </Grid>
+</Controls:MetroWindow>
